@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="wordmark" href="../index.html">Your Name</a>
+    <ul>
+      <li><a href="../index.html">About</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <h1>Resume</h1>
+  <p style="color: var(--muted); margin-bottom: 2rem;">
+    Software Engineer · [Your City, State] ·
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a> ·
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+  </p>
+
+  <!-- ── Education ── -->
+  <section class="resume-section">
+    <h2>Education</h2>
+    <hr class="section-rule" style="margin-top:0.5rem;" />
+
+    <div class="resume-entry">
+      <div>
+        <h3>[Your University]</h3>
+        <p class="resume-org">B.S. Computer Science</p>
+        <ul>
+          <li>GPA: [X.X] / 4.0 (optional — remove if you'd rather not include it)</li>
+          <li>Relevant coursework: Data Structures, Algorithms, Operating Systems,
+              Software Engineering, [add others]</li>
+          <li>Activities: [Club, honor society, hackathon team, etc.]</li>
+        </ul>
+      </div>
+      <div class="resume-date">Expected May 20XX</div>
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section class="resume-section">
+    <h2>Experience</h2>
+    <hr class="section-rule" style="margin-top:0.5rem;" />
+
+    <div class="resume-entry">
+      <div>
+        <h3>Software Engineering Intern</h3>
+        <p class="resume-org">[Company Name]</p>
+        <ul>
+          <li>Describe your most impactful contribution using a metric where possible (e.g., "Reduced API response time by 40% by …").</li>
+          <li>Second bullet: describe a key technology or skill you applied.</li>
+          <li>Third bullet: optional — collaboration, mentorship, or scope.</li>
+        </ul>
+      </div>
+      <div class="resume-date">May – Aug 20XX</div>
+    </div>
+
+    <div class="resume-entry">
+      <div>
+        <h3>[Another Role or Research Position]</h3>
+        <p class="resume-org">[Organization]</p>
+        <ul>
+          <li>Description of your work here.</li>
+          <li>Another bullet with impact or technology used.</li>
+        </ul>
+      </div>
+      <div class="resume-date">Aug 20XX – Present</div>
+    </div>
+
+    <!-- Add more entries as needed. Delete this block if you have nothing to add yet. -->
+  </section>
+
+  <!-- ── Projects ── -->
+  <section class="resume-section">
+    <h2>Projects</h2>
+    <hr class="section-rule" style="margin-top:0.5rem;" />
+
+    <div class="resume-entry">
+      <div>
+        <h3><a href="projects/project1.html">Project One Title</a></h3>
+        <p class="resume-org">Personal project · [GitHub link optional]</p>
+        <ul>
+          <li>One-line description of what it does and the core technical challenge.</li>
+          <li>Key technology or architectural decision.</li>
+        </ul>
+        <div class="tech-stack" style="margin-top:0.5rem;">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Flask</span>
+          <span class="tech-pill">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="resume-date">20XX</div>
+    </div>
+
+    <div class="resume-entry">
+      <div>
+        <h3><a href="projects/project2.html">Project Two Title</a></h3>
+        <p class="resume-org">Course project — [Class Name]</p>
+        <ul>
+          <li>One-line description of what it does and the core technical challenge.</li>
+          <li>Key technology or architectural decision.</li>
+        </ul>
+        <div class="tech-stack" style="margin-top:0.5rem;">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">MongoDB</span>
+        </div>
+      </div>
+      <div class="resume-date">20XX</div>
+    </div>
+
+    <div class="resume-entry">
+      <div>
+        <h3><a href="projects/project3.html">Project Three Title</a></h3>
+        <p class="resume-org">Team project — [Hackathon / Class]</p>
+        <ul>
+          <li>One-line description of what it does and the core technical challenge.</li>
+          <li>Key technology or architectural decision.</li>
+        </ul>
+        <div class="tech-stack" style="margin-top:0.5rem;">
+          <span class="tech-pill">Java</span>
+          <span class="tech-pill">Spring Boot</span>
+          <span class="tech-pill">Docker</span>
+        </div>
+      </div>
+      <div class="resume-date">20XX</div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section class="resume-section">
+    <h2>Skills</h2>
+    <hr class="section-rule" style="margin-top:0.5rem;" />
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>JavaScript / TypeScript</li>
+          <li>SQL</li>
+          <li>[Add / remove]</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks &amp; Libraries</h3>
+        <ul>
+          <li>React</li>
+          <li>Flask / FastAPI</li>
+          <li>Spring Boot</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>Docker</li>
+          <li>Linux / Bash</li>
+          <li>PostgreSQL · MongoDB</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Concepts</h3>
+        <ul>
+          <li>REST API design</li>
+          <li>Agile / Scrum</li>
+          <li>Data structures &amp; algorithms</li>
+          <li>CI / CD pipelines</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Awards / Honors (optional) ── -->
+  <section class="resume-section">
+    <h2>Awards &amp; Honors</h2>
+    <hr class="section-rule" style="margin-top:0.5rem;" />
+
+    <div class="resume-entry">
+      <div>
+        <h3>[Award Name]</h3>
+        <p class="resume-org">[Issuing Organization]</p>
+      </div>
+      <div class="resume-date">20XX</div>
+    </div>
+    <!-- Delete this entire section if you'd rather not include it -->
+  </section>
+</main>
+
+<footer>
+  <p>Built with plain HTML &amp; CSS · Hosted on GitHub Pages</p>
+</footer>
+
+</body>
+</html>
