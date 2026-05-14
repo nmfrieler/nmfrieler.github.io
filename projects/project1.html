@@ -30,25 +30,25 @@
   <!-- Hero image / screenshot -->
   <img src="../assets/wsri.png" alt="Wolfram Summer Research Institute Logo" class="project-hero-img"/>
 
-  <h1>Project One Title</h1>
+  <h1>Analyzing multiway chemical reaction networks using chemical space networks</h1>
 
   <!-- Quick-reference metadata -->
   <div class="project-meta">
     <div class="meta-item">
       <div class="meta-label">Type</div>
-      Personal Project <!-- or: Course Project / Team Project -->
+      Project for the 2024 Wolfram Summer Research Institute
     </div>
     <div class="meta-item">
       <div class="meta-label">Year</div>
-      20XX
+      2024
     </div>
     <div class="meta-item">
       <div class="meta-label">Stack</div>
-      Python · Flask · PostgreSQL
+      Mathematica
     </div>
     <div class="meta-item">
       <div class="meta-label">Links</div>
-      <a href="https://github.com/yourusername/project1" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://community.wolfram.com/groups/-/m/t/3210073" target="_blank" rel="noopener">Wolfram Community</a>
       <!-- Add a live demo link if applicable: · <a href="https://..." target="_blank">Live Demo</a> -->
     </div>
   </div>
@@ -56,48 +56,51 @@
   <!-- Overview -->
   <h2>Overview</h2>
   <p>
-    Describe the project in 2–3 sentences. What problem does it solve? Who
-    would use it? Keep it concrete — avoid abstract buzzwords and instead
-    say what the software actually does.
+    This project analyzes the relationship between the topological similarity of two isomers and 
+    the number of reactions required to go from one molecule to the other. I used various graph statistics
+    to demonstrate the unique structures present within various chemical reaction networks.
   </p>
 
   <!-- Motivation -->
   <h2>Why I built this</h2>
   <p>
-    Explain what motivated you. This could be a class assignment, a personal
-    need, a hackathon prompt, or curiosity about a technology. Admissions
-    committees and hiring managers like to see that you have genuine reasons
-    for your projects.
+    This project was my headfirst introduction into serious programming in Mathematica. While I had done
+    several small-scale coding projects in the language before, this 3-week nonstop programming experience
+    greatly expanded my knowledge and skills in Mathematica. I chose this topic for my project because
+    many of my previous small projects in Mathematica were graph theoretic, and I had previously done
+    chemistry research, so a project about chemical reactions seemed very fitting.
   </p>
 
   <!-- Technical highlights -->
   <h2>Technical highlights</h2>
-  <h3>Challenge: [e.g., Efficient data ingestion]</h3>
+  <h3>Challenge: Computational Explosion</h3>
   <p>
-    Describe one interesting technical problem you solved. Be specific —
-    name the approach, the trade-offs you considered, and why you chose the
-    solution you did. This is the section that shows engineering judgment.
+    Many of the most interesting chemical reaciton networks grow rapidly as you increase the number of 
+    reaction steps. It was a significant task to both speed up the network generation step as well as 
+    find a system that did not grow too big too fast.
   </p>
 
-  <h3>Challenge: [e.g., Authentication flow]</h3>
+  <h3>Challenge: Data Visualization</h3>
   <p>
-    Describe a second technical challenge here. If you only have one major
-    challenge, delete this block.
+    Many of the most interesting plots from this project involve 100s or 1000s of molecules, so
+    finding a way to display all of the relevant information in an easy-to-understand visualize 
+    was a very rewarding task.
   </p>
 
   <!-- Results / impact -->
   <h2>Results</h2>
   <p>
-    What did the project achieve? Use numbers where possible (e.g., "processes
-    10,000 records in under 2 seconds"). If it was a class project, mention
-    the grade or instructor feedback only if it's noteworthy.
+    The main conclusion of my project is that the topological similarity between two molecules is 
+    highly correlated with the number of reacitons required to reach a nearest common ancestor in the 
+    chemical reaction network. Additionally, my project produced a large number of useful functions 
+    and visualization tools that are available for others to use and expand upon.
   </p>
 
   <!-- Reflection -->
   <h2>What I'd do differently</h2>
   <p>
-    A short, honest reflection shows self-awareness. What would you change
-    now that you know more? What did this project teach you?
+    I would spend more time early on building modular functionality so that I could perform more 
+    computational experiments more efficiently.
   </p>
 
   <hr class="section-rule" />
