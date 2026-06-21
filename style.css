@@ -403,8 +403,8 @@ hr.section-rule {
 
 /* ── Footer ── */
 footer {
-  text-align: center;
-  padding: 2rem;
+  text-align: left;
+  padding: 2rem 0;
   font-size: 0.8rem;
   color: var(--muted);
   border-top: 1px solid var(--warm);
@@ -512,4 +512,34 @@ main {
     width: 96px;
     height: 96px;
   }
+}
+footer p {
+  width: calc(100% - 4rem);
+  max-width: 33rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  footer p { width: calc(100% - 2rem); }
+}
+/* Resume bottom spacing */
+.resume-page main {
+  padding-bottom: 0.5rem;
+}
+.resume-page .resume-section:last-child {
+  margin-bottom: 0;
+}
+.resume-page footer {
+  margin-top: 0.5rem;
+}
+/* Projects bottom spacing */
+.projects-page main {
+  padding-bottom: 0.5rem;
+}
+.projects-page footer {
+  margin-top: 0.5rem;
+}
+.projects-index-page footer {
+  margin-top: 1.5rem;
 }
