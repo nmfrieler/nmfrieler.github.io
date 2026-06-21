@@ -439,3 +439,77 @@ footer {
     padding: 0.5rem 0.35rem;
     font-size: 0.72rem;
   }
+
+/* Deployment-safe shared alignment */
+nav .nav-inner,
+main {
+  width: calc(100% - 4rem);
+  max-width: 33rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav .nav-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* About page */
+.about-page main {
+  padding-top: 0;
+  padding-bottom: 0.75rem;
+}
+.about-page .hero {
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+}
+.about-page .hero-copy,
+.about-page .home-section {
+  width: 100%;
+}
+.about-page .hero-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.about-page .hero-heading-row h1 {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.about-page .hero-avatar {
+  flex: 0 0 auto;
+}
+.about-page .hero + .section-rule {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.about-page .home-section p:last-child {
+  margin-bottom: 0;
+}
+.about-page footer {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  nav .nav-inner,
+  main {
+    width: calc(100% - 2rem);
+  }
+  main,
+  nav .nav-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-page .hero-heading-row {
+    display: flex;
+    gap: 1rem;
+  }
+  .about-page .hero-avatar {
+    width: 96px;
+    height: 96px;
+  }
+}
