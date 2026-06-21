@@ -11,7 +11,8 @@
 
   --font-head: 'DM Serif Display', Georgia, serif;
   --font-body: 'Nunito', 'Segoe UI', sans-serif;
-  --max-w: 760px;
+  --copy-w: 33rem;
+  --max-w: calc(var(--copy-w) + 4rem);
   --nav-h: 60px;
 }
 
@@ -37,12 +38,12 @@ nav {
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  padding: 0 2rem;
 }
 nav .nav-inner {
   max-width: var(--max-w);
   width: 100%;
   margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,6 +54,7 @@ nav .wordmark {
   color: var(--ink);
   text-decoration: none;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 nav ul {
   list-style: none;
@@ -74,7 +76,7 @@ nav a:hover, nav a.active { color: var(--sage-dk); }
 main {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 3rem 2rem 5rem;
+  padding: 3rem 2rem 2.5rem;
 }
 
 /* ── Typography ── */
@@ -98,7 +100,7 @@ h3 {
   margin: 1.5rem 0 0.4rem;
 }
 p {
-  max-width: 65ch;
+  max-width: var(--copy-w);
   line-height: 1.6;
   margin-bottom: 0.9rem;
   color: var(--ink);
@@ -109,12 +111,19 @@ a:hover { color: var(--accent); }
 
 /* ── Hero (about page) ── */
 .hero {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: start;
   padding: 3rem 0 2rem;
 }
+.hero-copy,
+.home-section {
+  width: min(100%, var(--copy-w));
+}
+.hero-heading-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero-heading-row h1 { margin-bottom: 0; }
 .hero-avatar {
   width: 140px;
   height: 140px;
@@ -124,6 +133,7 @@ a:hover { color: var(--accent); }
   object-fit: cover;
   flex-shrink: 0;
 }
+.hero-heading-row + .tag-row { margin-top: 1rem; }
 .hero-avatar-placeholder {
   width: 140px;
   height: 140px;
@@ -161,6 +171,13 @@ hr.section-rule {
   border-top: 1px solid var(--warm);
   margin: 2.5rem 0;
 }
+.hero + .section-rule {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.section-rule + .home-section h2 {
+  margin-top: 0;
+}
 
 /* ── CTA Button ── */
 .btn {
@@ -184,6 +201,25 @@ hr.section-rule {
   border: 1.5px solid var(--sage);
 }
 .btn-ghost:hover { background: var(--sage-lt); color: var(--sage-dk); }
+.btn-disabled {
+  background: transparent;
+  color: var(--muted);
+  border: 1.5px solid var(--warm);
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+.project-nav {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.project-nav .btn {
+  margin-top: 0;
+  text-align: center;
+}
 
 /* ── Project cards ── */
 .project-grid {
@@ -214,6 +250,10 @@ hr.section-rule {
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
+}
+.project-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
 }
 .project-info { padding: 1.25rem 1.5rem; }
 .project-info h3 { margin-top: 0; }
@@ -256,15 +296,79 @@ hr.section-rule {
 .meta-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
 
 /* ── Resume ── */
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.resume-header h1 {
+  margin-bottom: 0.35rem;
+}
+.resume-header p {
+  max-width: none;
+  margin-bottom: 0;
+  color: var(--muted);
+  text-align: center;
+}
+.resume-summary {
+  display: block;
+}
+.resume-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+.social-icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
 .resume-section { margin-bottom: 2rem; }
+.resume-section > .section-rule { margin-bottom: 0.25rem; }
+.resume-section > .section-rule + .resume-entry h3 {
+  margin-top: 0;
+}
 .resume-entry {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 0.5rem;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
   margin-bottom: 1.25rem;
+}
+.resume-entry > div:first-child {
+  display: contents;
+}
+.resume-entry h3 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.resume-group-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sage-dk);
+}
+.resume-entry > div:first-child > :not(h3) {
+  grid-column: 1 / -1;
+}
+.resume-entry p,
+.resume-entry ul {
+  max-width: none;
+  width: 100%;
 }
 .resume-date {
   font-size: 0.82rem;
+  grid-column: 2;
+  grid-row: 1;
   color: var(--muted);
   white-space: nowrap;
   padding-top: 0.1rem;
@@ -280,12 +384,22 @@ hr.section-rule {
 .resume-entry li { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.2rem; color: var(--ink); }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
 }
 .skill-group h3 { margin-top: 0; font-size: 0.85rem; margin-bottom: 0.4rem; }
-.skill-group ul { list-style: none; padding: 0; }
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+}
 .skill-group li { font-size: 0.85rem; color: var(--muted); padding: 0.15rem 0; }
+
+@media (max-width: 480px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
 
 /* ── Footer ── */
 footer {
@@ -294,13 +408,34 @@ footer {
   font-size: 0.8rem;
   color: var(--muted);
   border-top: 1px solid var(--warm);
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 600px) {
-  .hero { grid-template-columns: 1fr; }
+  :root { --max-w: calc(var(--copy-w) + 2rem); }
+  main { padding: 2rem 1rem 2rem; }
+  nav .nav-inner { padding: 0 1rem; }
+  nav .wordmark { font-size: 0.9rem; }
+  nav a { font-size: 0.68rem; }
+  nav ul { gap: 0.5rem; }
+
+  .hero-heading-row {
+    grid-template-columns: 1fr 96px;
+    gap: 1rem;
+  }
+  .hero-avatar {
+    width: 96px;
+    height: 96px;
+  }
   .hero-avatar-placeholder { margin: 0 auto; }
   .project-card { grid-template-columns: 1fr; }
   .project-thumb { min-height: 100px; }
-  nav ul { gap: 1rem; }
 }
+  .project-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+  .project-nav .btn {
+    padding: 0.5rem 0.35rem;
+    font-size: 0.72rem;
+  }

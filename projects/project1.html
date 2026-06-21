@@ -22,14 +22,7 @@
 </nav>
 
 <main>
-  <!-- Back link -->
-  <p style="margin-bottom:1.5rem;">
-    <a href="index.html">← All Projects</a>
-  </p>
-
-  <!-- Hero image / screenshot -->
-<img src="../assets/wsri.png" alt="Wolfram Summer Research Institute Logo" style="height:200px; width:auto; display:block; margin:0 auto 2rem;" />  
-<h1>Analyzing Multiway Chemical Reaction Networks Using Chemical Space Networks</h1>
+<h1 class="project-title">Analyzing Multiway Chemical Reaction Networks Using Chemical Space Networks</h1>
 
   <!-- Quick-reference metadata -->
   <div class="project-meta">
@@ -69,6 +62,8 @@
     many of my previous small projects in Mathematica were graph theoretic, and I had previously done
     chemistry research, so a project about chemical reactions seemed very fitting.
   </p>
+  <img src="../assets/wsri.png" alt="Wolfram Summer Research Institute Logo"
+       style="height:200px; width:auto; max-width:100%; display:block; margin:1.5rem auto 2rem;" />
 
   <!-- Technical highlights -->
   <h2>Technical highlights</h2>
@@ -105,9 +100,11 @@
   </p>
 
   <hr class="section-rule" />
-  <a class="btn" href="project2.html">Next project →</a>
-  &nbsp;
-  <a class="btn btn-ghost" href="index.html">All projects</a>
+  <div class="project-nav" role="navigation" aria-label="Project navigation">
+    <span class="btn btn-disabled" aria-hidden="true">Previous project</span>
+    <a class="btn" href="index.html">All projects</a>
+    <a class="btn btn-ghost" href="project2.html">Next project</a>
+  </div>
 </main>
 
 <footer>

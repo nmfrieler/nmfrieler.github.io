@@ -23,14 +23,7 @@
 </nav>
 
 <main>
-  <!-- Back link -->
-  <p style="margin-bottom:1.5rem;">
-    <a href="index.html">← All Projects</a>
-  </p>
-
-  <!-- Hero image / screenshot -->
-<img src="../assets/minimal_economic_hero_img.png" alt="Screenshot of Project Three" style="height:350px; width:auto; display:block; margin:0 auto 2rem;" />
-<h1>Exploring the Foundations of Economic Behavior:
+<h1 class="project-title">Exploring the Foundations of Economic Behavior:
       A Minimal Agent-Based Model of Diminishing Marginal Utility</h1>
 
   <!-- Quick-reference metadata -->
@@ -82,6 +75,8 @@
     The model as-implemented was unable to recover the principle of diminishing marginal utility, 
     which was the main economic principle being considered.
   </p>
+  <img src="../assets/minimal_economic_hero_img.png" alt="Minimal agent-based economic model visualization"
+       style="width:auto; height:auto; max-width:100%; display:block; margin:1.5rem auto 2rem;" />
 
   <!-- Reflection -->
   <h2>What I'd do differently</h2>
@@ -92,9 +87,11 @@
   </p>
 
   <hr class="section-rule" />
-  <a class="btn" href="index.html">All projects</a>
-  &nbsp;
-  <a class="btn btn-ghost" href="index.html">All projects</a>
+  <div class="project-nav" role="navigation" aria-label="Project navigation">
+    <a class="btn btn-ghost" href="project2.html">Previous project</a>
+    <a class="btn" href="index.html">All projects</a>
+    <span class="btn btn-disabled" aria-hidden="true">Next project</span>
+  </div>
 </main>
 
 <footer>
